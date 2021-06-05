@@ -1,6 +1,6 @@
 ---
 title: Combo de cerveja e petiscos por R$ 50,00
-description: 6 itaipava de 600ml com batata frita com bacon e cheddar
+description: 6 itaipava de 600ml com batata frita com bacon e cheddar todas as quartas.
 date: 2021-06-05 10:55:02
 image: assets/img/itaipava.jpg
 category: combos
