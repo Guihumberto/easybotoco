@@ -1,47 +1,53 @@
 import React from "react"
-import PropTypes from "prop-types"
-
-import getThemeColor from "../../utils/getThemeColor"
+import propTypes from "prop-types"
 
 import * as S from "./styled"
+import getThemeColor from "../../utils/getThemeColor"
 
-const PostItem = ({
-  slug,
-  background,
-  category,
-  date,
-  timeToRead,
-  title,
-  description,
-}) => (
-  <S.PostItemLink
-    to={slug}
-    cover
-    direction="right"
-    bg={getThemeColor()}
-    duration={0.6}
-  >
-    <S.PostItemWrapper>
-      <S.PostItemTag background={background}>{category}</S.PostItemTag>
-      <S.PostItemInfo>
-        <S.PostItemDate>
-          {date} • {timeToRead} min de leitura
-        </S.PostItemDate>
-        <S.PostItemTitle>{title}</S.PostItemTitle>
-        <S.PostItemDescription>{description}</S.PostItemDescription>
-      </S.PostItemInfo>
-    </S.PostItemWrapper>
-  </S.PostItemLink>
+const RecommendedPosts = ({ next, previous }) => (
+  <S.RecommendedWrapper>
+    {previous && (
+      <S.RecommendedLink
+        to={previous.fields.slug}
+        cover
+        direction="left"
+        bg={getThemeColor()}
+        className="previous"
+      >
+        {previous.frontmatter.title}
+      </S.RecommendedLink>
+    )}
+    {next && (
+      <S.RecommendedLink
+        to={next.fields.slug}
+        cover
+        direction="right"
+        bg={getThemeColor()}
+        className="next"
+      >
+        {next.frontmatter.title}
+      </S.RecommendedLink>
+    )}
+  </S.RecommendedWrapper>
 )
 
-PostItem.propTypes = {
-  slug: PropTypes.string.isRequired,
-  background: PropTypes.string,
-  category: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+RecommendedPosts.propTypes = {
+  next: propTypes.shape({
+    frontmatter: propTypes.shape({
+      title: propTypes.string.isRequired,
+    }),
+    fields: propTypes.shape({
+      slug: propTypes.string.isRequired,
+    }),
+  }),
+  previous: propTypes.shape({
+    frontmatter: propTypes.shape({
+      title: propTypes.string.isRequired,
+    }),
+    fields: propTypes.shape({
+      slug: propTypes.string.isRequired,
+    }),
+  }),
 }
 
-export default PostItem
+export default RecommendedPosts

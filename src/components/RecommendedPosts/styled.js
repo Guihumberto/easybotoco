@@ -2,88 +2,48 @@ import styled from "styled-components"
 import media from "styled-media-query"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-export const PostItemLink = styled(AniLink)`
-  color: var(--texts);
-  display: flex;
-  text-decoration: none;
-  body#grid & {
-    background-color: var(--background);
-  }
-  &:hover {
-    color: var(--highlight);
-  }
-`
-
-export const PostItemWrapper = styled.section`
-  align-items: center;
+export const RecommendedWrapper = styled.section`
   border-bottom: 1px solid var(--borders);
+  border-top: 1px solid var(--borders);
+  background: var(--mediumBackground);
   display: flex;
-  padding: 2rem 3rem;
-  width: 100%;
-  body#grid & {
-    border: none;
-    padding: 2rem 1rem;
-    flex-direction: column;
-    justify-content: center;
-  }
-  ${media.lessThan("large")`
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 2rem 1rem;
-  `}
 `
 
-export const PostItemTag = styled.div`
+export const RecommendedLink = styled(AniLink)`
   align-items: center;
-  background: ${props =>
-    props.background ? props.background : "var(--highlight)"};
-  border-radius: 50%;
-  color: #fff;
+  background: var(--mediumBackground);
+  color: var(--highlight);
   display: flex;
-  font-size: 1.3rem;
-  font-weight: 700;
-  justify-content: center;
-  min-height: 90px;
-  min-width: 90px;
-  text-transform: uppercase;
+  padding: 3rem;
+  text-decoration: none;
+  transition: background 0.5s;
+  width: 50%;
+
   ${media.lessThan("large")`
-    border-radius: 0;
-    font-size: 1rem;
-    min-height: auto;
-    min-width: auto;
-    padding: .2rem .5rem;
-    margin-bottom: .7rem;
+    padding: 2rem 1rem;
+    line-height: 1.3;
+    font-size: .9rem;
   `}
-  body#grid & {
-    margin-bottom: 1.5rem;
+
+  &:hover {
+    background: var(--borders);
   }
-`
 
-export const PostItemInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 1.5rem;
-  ${media.lessThan("large")`
-    margin: 0;
-  `}
-`
-
-export const PostItemDate = styled.time`
-  font-size: 0.9rem;
-`
-
-export const PostItemTitle = styled.h1`
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin: 0.2rem 0 0.5rem;
-  body#grid & {
-    line-height: 1.1;
-    margin: 0.8rem 0;
+  &.previous {
+    border-right: 1px solid var(--borders);
   }
-`
 
-export const PostItemDescription = styled.p`
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.2;
+  &.next {
+    justify-content: flex-end;
+  }
+
+  &.previous:before {
+    content: "\\2190";
+    margin-right: 0.5rem;
+  }
+
+  &.next:after {
+    content: "\\2192";
+    margin-left: 0.5rem;
+  }
 `
