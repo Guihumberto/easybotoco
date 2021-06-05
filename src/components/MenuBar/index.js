@@ -6,6 +6,7 @@ import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { Lightbulb as Light } from "@styled-icons/material-outlined/Lightbulb"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
+import { Whatsapp } from "@styled-icons/boxicons-logos/Whatsapp"
 
 import getThemeColor from "../../utils/getThemeColor"
 
@@ -51,6 +52,18 @@ const MenuBar = () => {
         >
           <S.MenuBarItem>
             <Search />
+          </S.MenuBarItem>
+        </S.MenuBarLink>
+        <S.MenuBarLink
+          to="https://api.whatsapp.com/send/?phone=5598984650786"
+          cover
+          direction="right"
+          bg={getThemeColor()}
+          duration={0.6}
+          title="Pesquisar"
+        >
+          <S.MenuBarItem>
+            <Whatsapp />
           </S.MenuBarItem>
         </S.MenuBarLink>
       </S.MenuBarGroup>
