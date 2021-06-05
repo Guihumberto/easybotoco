@@ -11,11 +11,11 @@ export const SidebarWrapper = styled.aside`
   position: fixed;
   padding: 2rem;
   text-align: center;
-  width: 20rem;
+  width: 15rem;
   ${media.lessThan("large")`
     align-items: flex-start;
     height: auto;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     width: 100%;
   `}
 `
