@@ -7,6 +7,7 @@ import { Lightbulb as Light } from "@styled-icons/material-outlined/Lightbulb"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
 import { Whatsapp } from "@styled-icons/boxicons-logos/Whatsapp"
+import { Instagram } from "styled-icons/boxicons-logos"
 
 import getThemeColor from "../../utils/getThemeColor"
 
@@ -64,6 +65,30 @@ const MenuBar = () => {
         >
           <S.MenuBarItem>
             <Whatsapp />
+          </S.MenuBarItem>
+        </S.MenuBarLink>
+        <S.MenuBarLink
+          to="https://www.instagram.com/easy_eventos_pinheiro/"
+          cover
+          direction="right"
+          bg={getThemeColor()}
+          duration={0.6}
+          title="Pesquisar"
+        >
+          <S.MenuBarItem>
+            <Instagram />
+          </S.MenuBarItem>
+        </S.MenuBarLink>
+        <S.MenuBarLink
+          to="https://easyboteco.com.br"
+          cover
+          direction="right"
+          bg={getThemeColor()}
+          duration={0.6}
+          title="Pesquisar"
+        >
+          <S.MenuBarItem>
+            <Grid />
           </S.MenuBarItem>
         </S.MenuBarLink>
       </S.MenuBarGroup>
