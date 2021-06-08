@@ -6,7 +6,6 @@ image: assets/img/itaipava.jpg
 category: combos
 background: "#EB7728"
 ---
-<<<<<<< HEAD
 
 ![Petra](/assets/img/itaipava.jpg)
 
@@ -14,8 +13,4 @@ Peça já seu combo de **6 cervejas itaipava de 600 ml** com batata frita com **
 
 **Obs.** *o limite dos 20 minutos estrapola um pouco por conta da batata, que deve chegar quentinha p você.*
 =======
-![Combo](/assets/img/itaipava.jpg)
-Peça já seu combo de **6 cervejas itaipava de 600 ml** com batata frita com **bacon e chedar** (se preferir) entregamos na sua casa.
 
-**Obs.** *o limite dos 20 minutos estrapola um pouco por conta da batata, que deve chegar quentinha p vc.*
->>>>>>> 258b6abff5b9882395715b98fd925b9ea71b6b8e

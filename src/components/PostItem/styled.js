@@ -82,10 +82,10 @@ export const PostItemTag = styled.div`
   width: 90px;
   padding: .2rem .5rem;
   text-transform: uppercase;
-  margin-bottom: .7rem;
+  margin-bottom: .3rem;
   flex-direction: column;
   ${media.lessThan("large")`
-    margin-bottom: .2rem;
+    margin-bottom: 0;
     font-size: 0.7rem;
     font-weight: 500;
     width: 70px;
@@ -118,11 +118,11 @@ export const PostItemDate = styled.time`
 export const PostItemTitle = styled.h1`
   font-size: 1.6rem;
   font-weight: 700;
-  margin: 0.2rem 0 0.5rem;
+  margin: 0 0 0 0.5rem;
   ${media.lessThan("large")`
     font-size: 1.2rem;
     font-weight: 700;
-    margin: .2rem 0 0 0;
+    margin: 0 0 0.3rem 0;
   `}
   body#grid & {
     line-height: 1.1;
