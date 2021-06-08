@@ -102,6 +102,8 @@ export const PostItemInfo = styled.div`
   margin-left: 1.5rem;
   ${media.lessThan("large")`
     margin: 0 0 0 1rem;
+    width: 300px;
+    padding: 1rem 0rem;
   `}
 `
 
