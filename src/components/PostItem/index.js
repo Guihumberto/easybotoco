@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 
 import getThemeColor from "../../utils/getThemeColor"
@@ -13,6 +14,7 @@ const PostItem = ({
   timeToRead,
   title,
   description,
+  image,
 }) => (
   <S.PostItemLink
     to={slug}
@@ -22,11 +24,18 @@ const PostItem = ({
     duration={0.6}
   >
     <S.PostItemWrapper>
-      <S.PostItemTag background={background}>{category}</S.PostItemTag>
+      <S.PostItemImage>
+              <StaticImage 
+                src="../../images/easy-icon.png" 
+                alt="easy avatar" 
+                placeholder="tracedSVG"
+            />
+      </S.PostItemImage>
       <S.PostItemInfo>
-        <S.PostItemDate>
-          {date} • {timeToRead} min de leitura
-        </S.PostItemDate>
+        <S.PostWrapperTagdate>
+          <S.PostItemTag background={background}>{category}</S.PostItemTag>
+          <S.PostItemDate> {date} • Pinheiro - MA</S.PostItemDate>
+        </S.PostWrapperTagdate>
         <S.PostItemTitle>{title}</S.PostItemTitle>
         <S.PostItemDescription>{description}</S.PostItemDescription>
       </S.PostItemInfo>

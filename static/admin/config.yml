@@ -28,7 +28,7 @@ collections:
         label: "Category",
         name: "category",
         widget: "select",
-        options: ["cerveja", "petiscos", "refeições", "combos", "drinks", "sorteio", "delivery"]
+        options: ["cerveja", "petiscos", "refeições", "combos", "drinks", "sorteio", "delivery", "eventos"]
       }
       - {
         label: "Background",
@@ -42,6 +42,7 @@ collections:
           { label: 'drinks', value: '#7D669E' },
           { label: 'sorteio', value: '#637a91' },
           { label: 'delivery', value: '#7AAB13' },
+          { label: 'eventos', value: '#7D669J' },
         ]
       }
       - { label: "Body", name: "body", widget: "markdown" }

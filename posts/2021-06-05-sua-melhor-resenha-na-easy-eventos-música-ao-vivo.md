@@ -1,5 +1,5 @@
 ---
-title: Sua melhor resenha na Easy Eventos - Música ao vivo
+title: Sua melhor resenha na Easy Eventos
 description: Um sozinho da melhor quantidade com uma cerveja super gelada a partir de quarta
 date: 2021-06-05 05:13:21
 image: assets/img/20demaio.png
